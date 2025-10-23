@@ -38,20 +38,20 @@ class IOSDeviceInfoLibrary : RefCounted {
         let native = screen.nativeBounds.size
 
         return [
-            // 包信息
+            // package info
             "bundle_id": bundle.bundleIdentifier ?? "",
             "app_name": appName,
             "app_version": version,
             "build_number": build,
             "executable": exec,
-            // 设备信息
+            // device info
             "device_name": dev.name,
             "device_model": dev.model,
-            "device_machine": hardwareIdentifier(), // 例如 iPhone15,3
+            "device_machine": hardwareIdentifier(), // iPhone.x
             "system_name": dev.systemName,
             "system_version": dev.systemVersion,
             "idfv": dev.identifierForVendor?.uuidString ?? "",
-            // 区域/屏幕
+            // screen
             "language": Locale.preferredLanguages.first ?? "",
             "locale": Locale.current.identifier,
             "timezone": TimeZone.current.identifier,
