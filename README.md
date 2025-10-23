@@ -1,8 +1,28 @@
 # godot_ios_plugin_get_ios_device_info
 an godot ios plugin example
-You can directly copy the bin and import it into the bin folder in your Godot project，
-Of course, you can also build your own。
 
+Since the built file is too large to upload, you need to build it yourself
+
+## how build it
+
+chmod +x ./build.sh
+
+./build.sh
+
+When the build is complete, copy the bin file into the Godot project bin folder, and then configure the IOSDeviceInfoLibrary.gdextension file
+
+## create IOSDeviceInfoLibrary.gdextension file
+```
+[configuration]
+entry_symbol = "swift_entry_point"
+compatibility_minimum = 4.2
+
+[libraries]
+ios.debug = "res://bin/IOSDeviceInfoLibrary.framework"
+
+[dependencies]
+ios.debug = {"res://bin/SwiftGodot.framework": ""}
+```
 ## How to use it
 ```
   if ClassDB.class_exists("IOSDeviceInfoLibrary"):
@@ -13,4 +33,4 @@ Of course, you can also build your own。
 		print("not font IOSDeviceInfoLibrary")
 ```
 
-If you are not satisfied with the information you get, you can edit the source code and build your own library
+If you are not satisfied with the information you get, you can edit the source code and then build your own library
