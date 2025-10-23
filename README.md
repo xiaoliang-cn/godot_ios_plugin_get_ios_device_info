@@ -34,3 +34,6 @@ ios.debug = {"res://bin/SwiftGodot.framework": ""}
 ```
 
 If you are not satisfied with the information you get, you can edit the source code and then build your own library
+
+## You should learn how to create a plugin here
+https://migueldeicaza.github.io/SwiftGodotDocs/tutorials/swiftgodot/your-first-extension/
