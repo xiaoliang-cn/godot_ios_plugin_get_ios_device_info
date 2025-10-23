@@ -28,7 +28,7 @@ ios.debug = {"res://bin/SwiftGodot.framework": ""}
   if ClassDB.class_exists("IOSDeviceInfoLibrary"):
 		var lib = ClassDB.instantiate("IOSDeviceInfoLibrary");
 		var info = lib.get_app_device_info();
-    print(info)
+        print(info)
 	else:
 		print("not font IOSDeviceInfoLibrary")
 ```
